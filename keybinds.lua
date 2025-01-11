@@ -11,6 +11,9 @@ return {
     { key = "t", mods = "CTRL", action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS", title = "Select workspace" }) },
     -- タブ閉じる
     { key = "w", mods = "CTRL", action = act.CloseCurrentTab { confirm = true } },
+    -- Tab移動
+    { key = "Tab", mods = "CTRL", action = act.ActivateTabRelative(1) },
+    { key = "Tab", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(-1) },
     -- アプリ終了
     { key = "q", mods = "CTRL", action = act.QuitApplication},
     -- フォントサイズ切替
