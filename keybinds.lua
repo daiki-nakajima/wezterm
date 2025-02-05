@@ -4,9 +4,11 @@ local act = wezterm.action
 return {
   keys = {
     -- コピー
-    { key = "c", mods = "CTRL", action = act.CopyTo("Clipboard") },
+    { key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
+    { key = "c", mods = "SHIFT|CTRL", action = act.CopyTo("Clipboard") },
     -- 貼り付け
-    { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
+    { key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
+    { key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
     -- 新規タブ
     { key = "t", mods = "CTRL", action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS", title = "Select workspace" }) },
     -- タブ閉じる
